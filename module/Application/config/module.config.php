@@ -115,5 +115,9 @@ return array(
                 )
             )
         )
-    ),    
+    ),
+    
+    'data-fixtures' => array(
+        'Application_fixtures' => __DIR__ . '/../src/Application/Fixture'
+    )
 );
