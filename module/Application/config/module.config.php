@@ -114,10 +114,13 @@ return array(
                     __NAMESPACE__ . "\Entity" => __NAMESPACE__ . '_driver'
                 )
             )
+        ),
+        'fixture' => array(
+            'Application_fixtures' => __DIR__ . '/../src/Application/Fixture'
         )
     ),
     
-    'data-fixtures' => array(
-        'Application_fixtures' => __DIR__ . '/../src/Application/Fixture'
-    )
+//    'data-fixtures' => array(
+//        'Application_fixtures' => __DIR__ . '/../src/Application/Fixture'
+//    )
 );
