@@ -5,8 +5,11 @@ return array(
         'DoctrineModule',
         'DoctrineORMModule',
         'DoctrineDataFixtureModule',
+        #adicionando o módulo "sp/jms-serializer-module" no composer.json que já faça isso automaticamente.
+        'JMSSerializerModule',
         'Application',
-        'SONUser'
+        'SONUser',
+        'SONRest',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

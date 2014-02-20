@@ -11,4 +11,6 @@ class CategoriaRepository extends EntityRepository {
     public function buscaPorNome($nome) {
         //método exemplo
     }
+    
+    
 }
