@@ -9,8 +9,11 @@ var categorias = angular.module('Categorias', ['ngRoute', 'ngResource']);
 // $routeProvider > Quem gerencia a rota
 categorias.config(['$routeProvider', 
     function ($routeProvider) {
-        $routeProvider.when('/', {
+        $routeProvider.when('/categorias', {
            templateUrl: 'projetoangular/templates/categorias.html'
+        })
+        .when('/categorias/novo', {
+           templateUrl: 'projetoangular/templates/categorias_novo.html'
         });
     }
 ]);
