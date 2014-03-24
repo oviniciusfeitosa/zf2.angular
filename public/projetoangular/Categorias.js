@@ -4,7 +4,7 @@
     Segundo parâmetro: Dependências do módulo
         ngRoute > é uma biblioteca externa (angular-route.min.js)
  */
-var categorias = angular.module('Categorias', ['ngRoute', 'nrResource']);
+var categorias = angular.module('Categorias', ['ngRoute', 'ngResource']);
 
 // $routeProvider > Quem gerencia a rota
 categorias.config(['$routeProvider', 

@@ -2,6 +2,14 @@
  * Categorias Controller
  */
 categorias.controller('CategoriasCtrl', 
-    ["$scope", function($scope) {
+    ["$scope", "CategoriasSrv", function($scope, CategoriasSrv) {
             $scope.nome = "Vinícius";
+            
+            // criando um método
+            $scope.load = function() {
+                $scope.registros = CategoriasSrv.query();
+            };
+            
+            //executando
+            $scope.load();
     }]); 
