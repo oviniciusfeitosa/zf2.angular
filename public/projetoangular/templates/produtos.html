@@ -1,20 +1,20 @@
 <div ng-init="load();">
-    <h3>
-        Categorias
-    </h3>
-    <a href="#/categorias/novo">Novo</a>
+    <h3>Produtos</h3>
+    <a href="#/produtos/novo">Novo</a>
     <table class="table">
         <thead>
-        <th>ID</th>
-        <th>CATEGORIA</th>
-        <th>AÇÃO</th>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Categoria</th>
+            <th>Ação</th>
         </thead>
         <tbody>
             <tr ng-repeat="registro in registros">
                 <td>{{registro.id}}</td>
                 <td>{{registro.nome}}</td>
+                <td>{{registro.categoria.nome}}</td>
                 <td>
-                    <a href="#/categorias/editar/{{registro.id}}" class="btn btn-primary btn-xs">Editar</a>
+                    <a href="#/produtos/editar/{{registro.id}}" class="btn btn-primary btn-xs">Editar</a>
                     <a href="#" ng-click="delete(registro.id)" class="btn btn-danger btn-xs">Ecluir</a>
                 </td>
             </tr>

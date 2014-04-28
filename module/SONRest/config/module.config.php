@@ -6,7 +6,8 @@ return array(
     'controllers' => array(
         'invokables' => array(
 //            "SONRest\Controller\Categoria" => "SONRest\Controller\CategoriaController"
-            "categoria" => "SONRest\Controller\CategoriaController"
+            "categoria" => "SONRest\Controller\CategoriaController",
+            "produto" => "SONRest\Controller\ProdutoController"
         )
     ),
     'router' => array(

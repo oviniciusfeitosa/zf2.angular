@@ -18,8 +18,8 @@ class Produto {
 		$categoriaEntity = $this->em->getReference("Application\Entity\Categoria", $data['categoriaId']);
 
 		$produto = new ProdutoEntity();
-		$produto->setNome('Macbook 15" ')
-				->setDescricao("Muito rápido.")
+		$produto->setNome($data['nome'])
+				->setDescricao($data['descricao'])
 				->setCategoria($categoriaEntity);
 
 		$this->em->persist($produto);
@@ -29,15 +29,13 @@ class Produto {
 	}
 
 	public function update(array $data) {
-		#getReference não vai ao banco de dados, pega apenas a referencia
+            
+    		#getReference não vai ao banco de dados, pega apenas a referencia
 		$categoriaEntity = $this->em->getReference("Application\Entity\Categoria", $data['categoriaId']);
-		$categoriaEntity->setNome($data['nome']);
-
-		$produto = $this->getReference("Application\Entity\Produto", $data["id"]);
+		$produto = $this->em->getReference("Application\Entity\Produto", $data["id"]);
 		$produto->setNome($data["nome"])
 				->setDescricao($data["descricao"])
 				->setCategoria($categoriaEntity);
-
 		$this->em->persist($produto);
 		$this->em->flush();
 

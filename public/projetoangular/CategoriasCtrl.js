@@ -1,6 +1,7 @@
 /* 
  * Categorias Controller
- */
+ * #agora é utilizado o controllers.js
+ * 
 categorias.controller('CategoriasCtrl', 
     //dependências
     ["$scope", "CategoriasSrv", "$location", '$routeParams',
@@ -57,3 +58,4 @@ categorias.controller('CategoriasCtrl',
                 }
             };
     }]); 
+*/

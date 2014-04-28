@@ -1,0 +1,10 @@
+/var/www/php/tmp/ZendFramework2/zf2.intermediario/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/Purger/ORMPurger.php
+
+Linha: 134
+adicionar> $this->em->getConnection()->executeUpdate('SET foreign_key_checks = 0;');
+
+antes de> $this->em->getConnection()->executeUpdate($platform->getTruncateTableSQL($tbl, true));
+
+adicionar> $this->em->getConnection()->executeUpdate('SET foreign_key_checks = 1;');
+
+após> $this->em->getConnection()->executeUpdate($platform->getTruncateTableSQL($tbl, true));
