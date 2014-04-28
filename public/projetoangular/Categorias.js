@@ -9,11 +9,15 @@ var categorias = angular.module('Categorias', ['ngRoute', 'ngResource']);
 // $routeProvider > Quem gerencia a rota
 categorias.config(['$routeProvider', 
     function ($routeProvider) {
-        $routeProvider.when('/categorias', {
-           templateUrl: 'projetoangular/templates/categorias.html'
-        })
-        .when('/categorias/novo', {
-           templateUrl: 'projetoangular/templates/categorias_novo.html'
-        });
+        $routeProvider
+            .when('/categorias/', {
+               templateUrl: 'projetoangular/templates/categorias.html'
+            })
+            .when('/categorias/novo/', {
+               templateUrl: 'projetoangular/templates/categorias_novo.html'
+            })
+            .when('/categorias/editar/:id', {
+               templateUrl: 'projetoangular/templates/categorias_editar.html'
+            });
     }
 ]);
